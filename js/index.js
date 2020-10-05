@@ -39,4 +39,68 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let navBar = document.getElementsByTagName("a");
+navBar[0].textContent = (siteContent["nav"]["nav-item-1"]);
+navBar[0].style.color = "green";
+navBar[1].textContent = (siteContent["nav"]["nav-item-2"]);
+navBar[1].style.color = "green";
+navBar[2].textContent = (siteContent["nav"]["nav-item-3"]);
+navBar[2].style.color = "green";
+navBar[3].textContent = (siteContent["nav"]["nav-item-4"]);
+navBar[3].style.color = "green";
+navBar[4].textContent = (siteContent["nav"]["nav-item-5"]);
+navBar[4].style.color = "green";
+navBar[5].textContent = (siteContent["nav"]["nav-item-6"]);
+navBar[5].style.color = "green";
+
+let headings = document.getElementsByTagName("h4");
+headings[0].textContent = (siteContent["main-content"]["features-h4"]);
+headings[1].textContent = (siteContent["main-content"]["about-h4"]);
+headings[2].textContent = (siteContent["main-content"]["services-h4"]);
+headings[3].textContent = (siteContent["main-content"]["product-h4"]);
+headings[4].textContent = (siteContent["main-content"]["vision-h4"]);
+headings[5].textContent = (siteContent["contact"]["contact-h4"]);
+
+let paragraphs = document.getElementsByTagName("p");
+paragraphs[0].textContent = (siteContent["main-content"]["features-content"]);
+paragraphs[1].textContent = (siteContent["main-content"]["about-content"]);
+paragraphs[2].textContent = (siteContent["main-content"]["services-content"]);
+paragraphs[3].textContent = (siteContent["main-content"]["product-content"]);
+paragraphs[4].textContent = (siteContent["main-content"]["vision-content"]);
+// paragraphs[5].textContent = (siteContent["contact"]["address"]);
+paragraphs[6].textContent = (siteContent["contact"]["phone"]);
+paragraphs[7].textContent = (siteContent["contact"]["email"]);
+paragraphs[8].textContent = (siteContent["footer"]["copyright"]);
+
+let button = document.getElementsByTagName("button");
+button[0].textContent = (siteContent["cta"]["button"]);
+
+let header = document.getElementsByTagName("h1");
+header[0].textContent = (siteContent["cta"]["h1"]);
+header[0].innerText = "DOM \n Is \n Awesome";
+// header[0].style.textAlign = center;
+
+//Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
+
+const firstNav = document.createElement('a');
+const lastNav = document.createElement('a');
+const nav = document.querySelector('nav');
+
+firstNav.style.color = 'green';
+lastNav.style.color = 'green';
+
+firstNav.textContent = 'Home';
+lastNav.textContent = 'FAQs';
+
+nav.append(firstNav);
+nav.prepend(lastNav);
+
+paragraphs[5].textContent = '123 Way 456 Street \n Somewhere, USA'
